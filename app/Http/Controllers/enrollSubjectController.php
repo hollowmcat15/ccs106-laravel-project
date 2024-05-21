@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\Log;
 
 class enrollSubjectController {
 
-    // Display the enrollment page with available subjects
-    public function enrollpage(Request $request)
-    {
+    public function enrollpage(Request $request) {
         $student = null;
         $subjects = null;
         $enrolledSubjects = null;
@@ -26,16 +24,14 @@ class enrollSubjectController {
         return view('enroll_subject', compact('student', 'subjects', 'student_id', 'enrolledSubjects'));
     }
 
-    // Handle the enrollment form submission
-    public function enroll(Request $request)
-    {
+    public function enroll(Request $request) {
         $student_id = $request->input('student_id');
-        $subjectIds = $request->input('subjects'); // Array of selected subject IDs
+        $subjectIds = $request->input('subjects');
 
         $student = studentModel::findOrFail($student_id);
 
         if ($subjectIds) {
-            $student->subjects()->sync($subjectIds); // Enroll the student in the selected subjects
+            $student->subjects()->sync($subjectIds);
         }
 
         return redirect()->route('enrollpage')
@@ -43,9 +39,7 @@ class enrollSubjectController {
                          ->with('student_id', $student_id);
     }
 
-    // Display the list of students and their enrolled subjects
-    public function displayStudents()
-    {
+    public function displayStudents() {
         $studentinfo = studentModel::with('subjects')->get();
         return view('students_display', compact('studentinfo'));
     }
