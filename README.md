@@ -4,7 +4,7 @@ This project is a Laravel demo of an enrollment system, well, at least it looks 
 
 ## Some other mentions
 
-This project is catered towards two types of individuals: the <u>user</u> and the <u>chairman</u>. While you can actually use the user functions for the website, there is also a secret page for accessing the chairman section since I made it inaccessible for obvious reasons. 
+This project is catered towards two types of individuals: the user and the chairman. While you can actually use the user functions for the website, there is also a secret page for accessing the chairman section since I made it inaccessible for obvious reasons. 
 
 To do it you must:
 
