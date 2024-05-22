@@ -60,6 +60,7 @@ body {
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -75,7 +76,7 @@ body {
     <a href="/">Home</a>
     <a href="/enroll">Enroll</a>
     <a href="/students_display">Students</a>
-    <a href="">Profile</a>
+    <a href="#">Profile</a>
     <a href="#">Reports</a>
     <a href="/subjectlist">Subjects</a>
     <a href="/teacher_display">Teachers</a>
